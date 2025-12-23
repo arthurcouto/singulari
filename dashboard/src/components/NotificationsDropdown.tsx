@@ -79,13 +79,13 @@ export function NotificationsDropdown() {
   const getIcon = (type: Notification["type"]) => {
     switch (type) {
       case "message":
-        return <MessageSquare className="h-4 w-4 text-blue-500" />;
+        return <MessageSquare className="h-4 w-4" style={{ color: "hsl(var(--primary))" }} />;
       case "grade":
-        return <GraduationCap className="h-4 w-4 text-green-500" />;
+        return <GraduationCap className="h-4 w-4" style={{ color: "hsl(var(--chart-school))" }} />;
       case "therapy":
-        return <Brain className="h-4 w-4 text-purple-500" />;
+        return <Brain className="h-4 w-4" style={{ color: "hsl(var(--chart-therapy))" }} />;
       case "health":
-        return <FileText className="h-4 w-4 text-red-500" />;
+        return <FileText className="h-4 w-4" style={{ color: "hsl(var(--chart-health))" }} />;
     }
   };
 

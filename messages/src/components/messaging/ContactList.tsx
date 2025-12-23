@@ -37,10 +37,10 @@ export function ContactList({ contacts, selectedContactId, onSelectContact, clas
 
   const getStatusBadge = (status?: Contact["status"]) => {
     if (status === "vacation") {
-      return <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-amber-100 text-amber-700 border-amber-200">Férias</Badge>;
+      return <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-warning/10 text-warning border-warning/20">Férias</Badge>;
     }
     if (status === "recess") {
-      return <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-blue-100 text-blue-700 border-blue-200">Recesso</Badge>;
+      return <Badge variant="secondary" className="text-[10px] px-1.5 py-0 bg-accent text-accent-foreground border-accent/50">Recesso</Badge>;
     }
     return null;
   };

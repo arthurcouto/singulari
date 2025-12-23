@@ -15,8 +15,8 @@ export function ServiceHoursBanner({ contact }: ServiceHoursBannerProps) {
   // Check if contact has status
   if (contact.status === "vacation") {
     return (
-      <Alert className="mx-3 mt-2 border-amber-200 bg-amber-50 text-amber-800">
-        <Palmtree className="h-4 w-4 text-amber-600" />
+      <Alert className="mx-3 mt-2 border-warning/20 bg-warning/10 text-warning">
+        <Palmtree className="h-4 w-4 text-warning" />
         <AlertDescription className="text-xs">
           <strong>{contact.name.split(" ")[0]}</strong> está de férias. Sua mensagem será respondida após o retorno.
         </AlertDescription>
@@ -26,8 +26,8 @@ export function ServiceHoursBanner({ contact }: ServiceHoursBannerProps) {
 
   if (contact.status === "recess") {
     return (
-      <Alert className="mx-3 mt-2 border-blue-200 bg-blue-50 text-blue-800">
-        <Coffee className="h-4 w-4 text-blue-600" />
+      <Alert className="mx-3 mt-2 border-accent/50 bg-accent/30 text-accent-foreground">
+        <Coffee className="h-4 w-4 text-accent-foreground" />
         <AlertDescription className="text-xs">
           <strong>{contact.name.split(" ")[0]}</strong> está em recesso escolar. O retorno está previsto para janeiro.
         </AlertDescription>
