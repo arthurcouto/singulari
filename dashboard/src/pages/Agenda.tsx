@@ -4,7 +4,7 @@ import { CalendarApp } from "@/components/calendar/CalendarApp";
 export default function Agenda() {
   return (
     <MainLayout>
-      <div className="h-[calc(100vh-180px)] -m-8 ml-0 mr-0">
+      <div className="h-[calc(100vh-200px)]">
         <CalendarApp />
       </div>
     </MainLayout>
