@@ -157,25 +157,25 @@
   }
 }
 
+/* Event Colors Variables for Calendar */
+:root {
+  --event-blue: 228 91% 64%;
+  --event-blue-light: 228 91% 95%;
+  --event-pink: 340 82% 65%;
+  --event-pink-light: 340 82% 95%;
+  --event-green: 142 71% 45%;
+  --event-green-light: 142 71% 93%;
+  --event-yellow: 48 96% 53%;
+  --event-yellow-light: 48 96% 92%;
+  --event-purple: 262 83% 65%;
+  --event-purple-light: 262 83% 95%;
+  --event-orange: 25 95% 53%;
+  --event-orange-light: 25 95% 93%;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  /* Event Colors Variables for Calendar */
-  :root {
-    --event-blue: 228 91% 64%;
-    --event-blue-light: 228 91% 95%;
-    --event-pink: 340 82% 65%;
-    --event-pink-light: 340 82% 95%;
-    --event-green: 142 71% 45%;
-    --event-green-light: 142 71% 93%;
-    --event-yellow: 48 96% 53%;
-    --event-yellow-light: 48 96% 92%;
-    --event-purple: 262 83% 65%;
-    --event-purple-light: 262 83% 95%;
-    --event-orange: 25 95% 53%;
-    --event-orange-light: 25 95% 93%;
   }
 
   /* Gradient backgrounds */
