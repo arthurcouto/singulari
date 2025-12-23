@@ -2,39 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 45 20% 98%;
-    --foreground: 220 20% 12%;
+    /* Singulari Color Palette */
+    --background: 230 100% 99%;
+    --foreground: 217 33% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 12%;
+    --card-foreground: 217 33% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 12%;
+    --popover-foreground: 217 33% 17%;
 
-    --primary: 220 70% 50%;
+    /* Azul Primário: #4F6EF7 */
+    --primary: 228 91% 64%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 20% 12%;
+    /* Azul Claro: #E9EDFF */
+    --secondary: 228 100% 96%;
+    --secondary-foreground: 217 33% 17%;
 
-    --muted: 220 15% 94%;
-    --muted-foreground: 220 10% 45%;
+    /* Cinza Claro (cards): #F3F4F6 */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 43%;
 
-    --accent: 160 60% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 228 100% 96%;
+    --accent-foreground: 228 91% 50%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 70% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 228 91% 64%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 220 15% 97%;
     --sidebar-foreground: 220 10% 30%;
