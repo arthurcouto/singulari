@@ -205,12 +205,12 @@ export function MessageInput({ onSendMessage, onSendAudio, onSendImage, onSendDo
             </div>
             <span className="text-sm">Imagem</span>
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             className="gap-2.5 cursor-pointer"
             onClick={() => videoInputRef.current?.click()}
           >
-            <div className="w-7 h-7 rounded-full bg-purple-500/10 flex items-center justify-center">
-              <Video className="h-3.5 w-3.5 text-purple-500" />
+            <div className="w-7 h-7 rounded-full bg-accent flex items-center justify-center">
+              <Video className="h-3.5 w-3.5 text-accent-foreground" />
             </div>
             <span className="text-sm">Vídeo</span>
           </DropdownMenuItem>
