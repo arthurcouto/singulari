@@ -121,8 +121,191 @@
   }
 }
 
+@layer components {
+  /* Message bubble styles */
+  .message-bubble-sent {
+    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md;
+  }
+
+  .message-bubble-received {
+    @apply bg-card text-card-foreground rounded-2xl rounded-bl-md shadow-sm border;
+  }
+
+  /* Event Color Classes */
+  .event-blue {
+    @apply bg-[hsl(var(--event-blue-light))] border-l-4 border-[hsl(var(--event-blue))];
+  }
+
+  .event-pink {
+    @apply bg-[hsl(var(--event-pink-light))] border-l-4 border-[hsl(var(--event-pink))];
+  }
+
+  .event-green {
+    @apply bg-[hsl(var(--event-green-light))] border-l-4 border-[hsl(var(--event-green))];
+  }
+
+  .event-yellow {
+    @apply bg-[hsl(var(--event-yellow-light))] border-l-4 border-[hsl(var(--event-yellow))];
+  }
+
+  .event-purple {
+    @apply bg-[hsl(var(--event-purple-light))] border-l-4 border-[hsl(var(--event-purple))];
+  }
+
+  .event-orange {
+    @apply bg-[hsl(var(--event-orange-light))] border-l-4 border-[hsl(var(--event-orange))];
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Event Colors Variables for Calendar */
+  :root {
+    --event-blue: 228 91% 64%;
+    --event-blue-light: 228 91% 95%;
+    --event-pink: 340 82% 65%;
+    --event-pink-light: 340 82% 95%;
+    --event-green: 142 71% 45%;
+    --event-green-light: 142 71% 93%;
+    --event-yellow: 48 96% 53%;
+    --event-yellow-light: 48 96% 92%;
+    --event-purple: 262 83% 65%;
+    --event-purple-light: 262 83% 95%;
+    --event-orange: 25 95% 53%;
+    --event-orange-light: 25 95% 93%;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-subtle {
+    background: linear-gradient(135deg, hsl(230 100% 99%) 0%, hsl(228 100% 98%) 100%);
+  }
+
+  /* Scrollbar styles */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Animations for messages */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out forwards;
+  }
+
+  .animate-bounce-in {
+    animation: bounceIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Audio and recording animations */
+  @keyframes waveform {
+    0%, 100% { height: 4px; }
+    50% { height: 16px; }
+  }
+
+  .waveform-bar {
+    animation: waveform 0.5s ease-in-out infinite;
+  }
+
+  .waveform-bar:nth-child(2) { animation-delay: 0.1s; }
+  .waveform-bar:nth-child(3) { animation-delay: 0.2s; }
+  .waveform-bar:nth-child(4) { animation-delay: 0.3s; }
+  .waveform-bar:nth-child(5) { animation-delay: 0.15s; }
+
+  @keyframes pulse-recording {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+  }
+
+  .recording-pulse {
+    animation: pulse-recording 1.5s ease-in-out infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/30;
 }
