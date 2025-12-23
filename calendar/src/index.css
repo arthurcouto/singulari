@@ -41,28 +41,33 @@
     --radius: 0.75rem;
 
     /* Event Colors */
-    --event-blue: 217 91% 60%;
-    --event-blue-light: 217 91% 95%;
+    --event-blue: 228 91% 64%;
+    --event-blue-light: 228 91% 95%;
     --event-pink: 340 82% 65%;
     --event-pink-light: 340 82% 95%;
     --event-green: 142 71% 45%;
     --event-green-light: 142 71% 93%;
-    --event-yellow: 45 93% 58%;
-    --event-yellow-light: 45 93% 92%;
+    --event-yellow: 48 96% 53%;
+    --event-yellow-light: 48 96% 92%;
     --event-purple: 262 83% 65%;
     --event-purple-light: 262 83% 95%;
     --event-orange: 25 95% 53%;
     --event-orange-light: 25 95% 93%;
 
     /* Sidebar */
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 220 9% 46%;
-    --sidebar-primary: 217 91% 60%;
+    --sidebar-background: 230 100% 99%;
+    --sidebar-foreground: 220 9% 43%;
+    --sidebar-primary: 217 33% 17%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 91% 97%;
-    --sidebar-accent-foreground: 217 91% 50%;
+    --sidebar-accent: 228 100% 96%;
+    --sidebar-accent-foreground: 217 33% 17%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-ring: 228 91% 64%;
+
+    /* Chart colors */
+    --chart-school: 228 91% 64%;
+    --chart-therapy: 142 71% 45%;
+    --chart-health: 43 96% 56%;
   }
 
   .dark {
@@ -75,7 +80,7 @@
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 228 91% 64%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217 33% 17%;
@@ -84,24 +89,28 @@
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 217 33% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 228 91% 20%;
+    --accent-foreground: 228 91% 80%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    --ring: 212 27% 84%;
+    --ring: 228 91% 64%;
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 215 20% 65%;
-    --sidebar-primary: 217 91% 60%;
+    --chart-school: 228 91% 64%;
+    --chart-therapy: 142 71% 45%;
+    --chart-health: 48 96% 53%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 228 91% 64%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 228 91% 64%;
   }
 }
 
@@ -112,7 +121,6 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }
 
