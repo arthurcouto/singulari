@@ -53,6 +53,14 @@ function AppRoutes() {
         }
       />
       <Route
+        path="/mensagens/:contactId"
+        element={
+          <ProtectedRoute>
+            <Mensagens />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/trabalhos"
         element={
           <ProtectedRoute>
